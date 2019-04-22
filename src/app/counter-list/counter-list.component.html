@@ -1,0 +1,13 @@
+
+<p>{{name}}</p>
+<p>There are : {{this.counters.length}} counters</p>
+<br>
+<div style="text-align:center" [ngClass]="'divStyle responsive'">
+<button  *ngIf="!(superFlag)" (click)="create()" [ngClass]="'btn btn-create'" >Create</button>
+<button *ngIf="superFlag" (click)="createSc()" [ngClass]="'btn btn-create'">Create Super Counter</button>
+<counter *ngFor="let c of counters" [counter]="c"></counter>
+<super-counter *ngFor="let s of superCounter" [superCounter]="s"></super-counter>
+
+</div>
+
+
